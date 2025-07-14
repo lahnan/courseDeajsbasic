@@ -1,4 +1,5 @@
-const APIKEY = "ewes ewes ewes bablas angine";
+const APIKEY = "da2a1e967e2245d0a1f63105251307";
+// tolong api key diganti pakai punya anda di weatherapi.com
 const city = document.querySelector(".city").textContent;
 
 function getIconEmoji(code, isNight){
