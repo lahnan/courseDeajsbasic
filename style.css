@@ -107,8 +107,10 @@ body[data-mode="night"] {
 .weather-center {
     display: flex;
     align-items: center;
+    flex-direction: column;
     gap: 10px;
-    margin-top: 120px;
+    margin-top: 50px;
+    z-index: 3;
 }
 
 .weather-center .weather-icon {
@@ -217,7 +219,7 @@ body[data-mode="night"] {
 }
 
 .input-city {
-    margin-top: 40px;
+    margin-top: 90px;
     gap: 10px;
     flex-direction: column;
     color: #ffffff;
@@ -261,4 +263,21 @@ button {
 
 button:hover {
     background-color: #ffffffa8;
+}
+
+.weather-temperature {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.realfeel {
+    background-color: #ffffff76;
+    color: #ffffff;
+    padding: 3px;
+    border-radius: 20px;
+    width: 60px;
+    text-shadow: 0 0 8px rgba(0,0,0,0.6);
+
 }

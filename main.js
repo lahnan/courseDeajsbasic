@@ -55,6 +55,8 @@ function getWeatherByCity(city) {
         const current = result.current;
         const forecast = result.forecast;
 
+        console.log(current)
+
         const localHour = new Date(location.localtime).getHours()
         // const localHour = 19
         const nightMode = isNight(localHour);
@@ -89,6 +91,7 @@ function getWeatherByCity(city) {
         document.querySelector(".humidity").textContent = `💧 ${current.humidity}%`
         document.querySelector(".wind").textContent = `💨 ${current.wind_kph} km/h`
         document.querySelector(".temperature").textContent = `${current.temp_c} °C`
+        document.querySelector(".realfeel").textContent = `${current.feelslike_c} °C`
 
         document.querySelector(".weather-icon").textContent = emoji
         
