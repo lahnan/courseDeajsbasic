@@ -1,4 +1,4 @@
-const APIKEY = "da2a1e967e2245d0a1f63105251307";
+const APIKEY = "ewes ewes ewes bablas angine";
 const city = document.querySelector(".city").textContent;
 
 function getIconEmoji(code, isNight){
