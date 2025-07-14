@@ -55,8 +55,8 @@ function getWeatherByCity(city) {
         const current = result.current;
         const forecast = result.forecast;
 
-        // const localHour = new Date(location.localtime).getHours()
-        const localHour = 19
+        const localHour = new Date(location.localtime).getHours()
+        // const localHour = 19
         const nightMode = isNight(localHour);
         const emoji = getIconEmoji(current.condition.code, nightMode)
 
@@ -164,5 +164,5 @@ function getWeatherByCity(city) {
 } 
 
 window.onload = () => {
-    getWeatherByCity(city);
+    getUsercity()
 }
