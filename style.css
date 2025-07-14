@@ -13,11 +13,11 @@ body {
 }
 
 body[data-mode="day"] {
-    background-color: #fef3bd;
+    background-color:#0d1b2a;
 }
 
 body[data-mode="night"] {
-    background-color: #0d1b2a;
+    background-color: #16202a;
 }
 
 /* Weather Card */
@@ -67,7 +67,7 @@ body[data-mode="night"] {
 }
 
 .weather-card[data-mode="day"]::before {
-    background: linear-gradient(135deg, #00cfff, #ffe15d);
+    background: linear-gradient(135deg, #e7bc00, #27844e);
     color: #fff;
 }
 
@@ -214,4 +214,51 @@ body[data-mode="night"] {
 ::-webkit-scrollbar-thumb:hover {
   background: #d1d1d1;
   border-radius: 20px;
+}
+
+.input-city {
+    margin-top: 40px;
+    gap: 10px;
+    flex-direction: column;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.alert-city {
+    margin: 10px;
+    color: #fff;
+    display: none;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+}
+
+.alert-city button {
+    width: 100px;
+}
+
+input {
+    border: none;
+    padding: 4px;
+    border-radius: 10px;
+
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+button {
+    padding: 3px;
+    border-radius: 10px;
+    border: none;
+    transition: .4 ease-in-out;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffffffa8;
 }

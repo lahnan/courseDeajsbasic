@@ -1,6 +1,25 @@
-const APIKEY = "da2a1e967e2245d0a1f63105251307";
+const APIKEY = "f8ac350417e94114a6531740251407";
 // tolong api key diganti pakai punya anda di weatherapi.com
 const city = document.querySelector(".city").textContent;
+
+const inputCity = document.getElementById("inputCity")
+const alertCity = document.querySelector(".alert-city")
+const alertText = document.querySelector(".alert-text")
+
+
+function getUsercity() {
+    if (document.querySelector(".city").textContent == inputCity.value) {
+        alert("nothing happen")
+    } else {
+        document.querySelector(".city").textContent = "Processing";
+        getWeatherByCity(inputCity.value)
+    }
+}
+
+function hideAlert() {
+    alertCity.style.display = "none";
+    inputCity.value = ""
+}
 
 function getIconEmoji(code, isNight){
     if([1000].includes(code)) return isNight ? "🌙" : "☀️";
@@ -25,12 +44,19 @@ function getWeatherByCity(city) {
     fetch(URL)
     .then(response => response.json())
     .then(result => {
+
+        if (result.error) {
+            alertCity.style.display = "flex"
+            document.querySelector(".city").textContent = "Error!"
+            alertText.textContent = result.error.message
+        }
+
         const location = result.location;
         const current = result.current;
         const forecast = result.forecast;
 
-        const localHour = new Date(location.localtime).getHours()
-        // const localHour = 19
+        // const localHour = new Date(location.localtime).getHours()
+        const localHour = 19
         const nightMode = isNight(localHour);
         const emoji = getIconEmoji(current.condition.code, nightMode)
 
@@ -131,11 +157,9 @@ function getWeatherByCity(city) {
         document.querySelector(".weather-emoji7").textContent = emoji7
         document.querySelector(".weather-temperature7").textContent = `${forecast.forecastday[7].day.avgtemp_c} °C`
         
-
-
     })
     .catch(err => {
-        console.log(err)
+        return err
     });
 } 
 

@@ -19,12 +19,25 @@
                 <div class="wind">-- km/h</div>
             </div>
         </div>
-
+        
         <div class="weather-center">
             <div class="weather-icon"></div>
             <div class="temperature">--℃</div>
         </div>
 
+        <div class="input-city">
+            <div class="input">
+                <input id="inputCity" type="text" placeholder="City" value="Malang"/>
+                <button onclick="getUsercity()">Check</button>
+            </div>
+            <div class="alert-city">
+                <p class="alert-text">
+                    the city you entered <br>does not exist!
+                </p>
+                <button onclick="hideAlert()">hide</button>
+            </div>
+        </div>
+        
         <div class="weather-bottom">
             <div class="weather-day1">
                 <div class="weather-time1">--</div>
