@@ -1,4 +1,4 @@
-const APIKEY = "a817990099094d53aa844447251407";
+const APIKEY = "a817990099094d53aa844447251407 ";
 // tolong api key diganti pakai punya anda di weatherapi.com
 const city = document.querySelector(".city").textContent;
 
